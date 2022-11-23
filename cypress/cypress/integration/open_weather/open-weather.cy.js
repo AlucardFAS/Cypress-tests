@@ -82,7 +82,6 @@ describe('Open Weather', () => {
       cy.getWeatherWithLang(this.city.itupeva.latitude, this.city.itupeva.longitude, true, 'pt_br')
       .then((response) => {
         assert.oneOf(response.body.weather['0'].description, ['nuvens dispersas', 'céu limpo', 'nublado']);
-        // expect(response.body.weather['0'].description).assert.oneOf('nuvens dispersas' || 'céu limpo' || 'nublado');
       })
     })
   })
