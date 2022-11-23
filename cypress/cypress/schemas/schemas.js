@@ -1,9 +1,14 @@
-"use strict";
-
 const Joi = require("joi");
 
-const weather_schema = Joi.object({
-    name: Joi.string()
+//schema parcial
+const weather_schema = Joi.object().keys({
+    name: Joi.string(),
+    id: Joi.number(),
+    cod: Joi.number(),
+    timezone: Joi.number(),
+    dt: Joi.number(),
+    visibility: Joi.number(),
+    base: Joi.string()
 })
   
 module.exports = {
