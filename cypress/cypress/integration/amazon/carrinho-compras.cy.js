@@ -1,7 +1,10 @@
 describe('Carrinho de compras', () => {
+
+  before(() => {
+    cy.visit('https://www.amazon.com.br/')
+  })
   
   it('Cenário 1 - Incluir produto no carrinho', () => {
-    cy.visit('https://www.amazon.com.br/')
     cy.get('#twotabsearchtextbox').type('hunter x hunter 35{enter}', {force:true})
       .get('[data-asin] > .sg-col-inner > .s-widget-container > .s-card-container > .a-spacing-base > .s-product-image-container > .rush-component > .a-link-normal > .a-section > .s-image')
         .first().click()
@@ -10,8 +13,7 @@ describe('Carrinho de compras', () => {
       .get('.a-truncate-cut').should('have.text', 'Hunter X Hunter - Vol. 35')
   })
 
-  it('Cenário 2 - Incluir produto 3 no carrinho e validar', () => {
-    cy.visit('https://www.amazon.com.br/')
+  it('Cenário 2 - Incluir produto 3 no carrinho e validar preço total', () => {
     cy.get('#twotabsearchtextbox').type('copo{enter}', {force:true})
       .get('[data-asin] > .sg-col-inner > .s-widget-container > [data-component-type="s-impression-logger"] > .s-featured-result-item > .s-card-container > .a-spacing-base > .s-product-image-container')
         .eq(2).click()

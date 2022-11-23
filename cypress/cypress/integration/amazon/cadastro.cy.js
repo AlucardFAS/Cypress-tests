@@ -1,6 +1,10 @@
 describe('Cadastro', () => {
+
+  before(() => {
+    cy.visit('https://www.amazon.com.br/')
+  })
+
     it('Cenário 3 - Realizar cadastro', () => {
-      cy.visit('https://www.amazon.com.br/')
       cy.get('#nav-link-accountList-nav-line-1').click()
         .get('#createAccountSubmit').click()
         .get('#ap_customer_name').type('Fernando Silva')
