@@ -1,5 +1,21 @@
 {
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "keywords": [],
+  "author": "Fernando Silva",
+  "license": "ISC",
   "dependencies": {
-    "chai-asserttype": "^1.0.5"
+    "chai": "^4.3.7",
+    "chai-asserttype": "^1.0.5",
+    "cypress": "9.5.0",
+    "joi": "17.6.0",
+    "joi-assert": "^0.0.3",
+    "eslint": "^8.22.0"
   }
 }
