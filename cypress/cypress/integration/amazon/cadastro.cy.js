@@ -1,7 +1,8 @@
 describe('Cadastro', () => {
 
   before(() => {
-    cy.visit('https://www.amazon.com.br/')
+    const AMAZON_URL = Cypress.env('AMAZON_URL')
+    cy.visit(AMAZON_URL)
   })
 
     it('Cenário 3 - Realizar cadastro', () => {

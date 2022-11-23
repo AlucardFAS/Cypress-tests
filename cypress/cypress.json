@@ -1,1 +1,7 @@
-{}
+{
+    "env": {
+        "AMAZON_URL": "https://www.amazon.com.br/",
+        "API_BASE_URL": "https://api.openweathermap.org/data/2.5/weather",
+        "APP_ID": ""
+    }
+}
